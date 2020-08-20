@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import RightMenuSlider from '@material-ui/core/Drawer';
+import { Link } from 'react-router-dom';
 import { 
     AppBar, Toolbar,
     ListItem, IconButton,
@@ -14,7 +15,9 @@ import {
     Home, Apps, ContactMail 
 } from '@material-ui/icons';
 
-import avatar from '../../avatar.png';
+import CastForEducationIcon from '@material-ui/icons/CastForEducation';
+
+import avatar from '../../kawsar1.jpg';
 
 // CSS STYLES
 const useStyle= makeStyles(theme=> ({
@@ -37,19 +40,28 @@ const useStyle= makeStyles(theme=> ({
 const menuItem = [
     {
         listIcon: <Home/>,
-        listText: "Home"
+        listText: "Home",
+        listPath: "/"
     },
     {
         listIcon: <AssignmentInd/>,
-        listText: "Resume"
+        listText: "Resume",
+        listPath: "/resume"
     },
     {
         listIcon: <Apps/>,
-        listText: "Portfolio"
+        listText: "Portfolio",
+        listPath: "/portfolio"
     },
     {
         listIcon: <ContactMail/>,
-        listText: "Contacts"
+        listText: "Contacts",
+        listPath: "/contact"
+    },
+    {
+        listIcon: <CastForEducationIcon/>,
+        listText: "Education",
+        listPath: "/education"
     }
 ]
 
@@ -74,7 +86,7 @@ const Navbar = () => {
           <Divider/> 
             <List>
                 {menuItem.map((lsItem, key) => (
-                    <ListItem button key={key}>
+                    <ListItem button key={key} component={Link} to={lsItem.listPath}>
                         <ListItemIcon className={classes.listItem}>{lsItem.listIcon}</ListItemIcon>
                         <ListItemText className={classes.listItem} primary={lsItem.listText}/>
                     </ListItem>
