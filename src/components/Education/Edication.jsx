@@ -2,6 +2,7 @@ import React from 'react';
 import './education.css';
 import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Navbar from '../Header';
 
 const useStyles = makeStyles ( theme => ({
     mainContainer: {
@@ -106,6 +107,8 @@ const useStyles = makeStyles ( theme => ({
 export default function Edication() {
     const classes = useStyles();
     return (
+        <>
+        <Navbar/>
         <Box component="header" className={classes.mainContainer}>
             <Typography variant="h4" align="center" className={classes.heading}>
                 Education
@@ -157,5 +160,6 @@ export default function Edication() {
               </Box>
             </Box>
         </Box>
+        </>
     )
 }
