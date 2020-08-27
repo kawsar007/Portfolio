@@ -36,6 +36,9 @@ const useStyle = makeStyles(theme => ({
     resume: {
        right: theme.spacing(3),
        color: '#ffffff'
+    },
+    about: {
+        textDecuration: "none",
     }
 }))
 

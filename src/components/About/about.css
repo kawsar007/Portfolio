@@ -1,0 +1,55 @@
+section {
+    margin: 50px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.about h1 {
+    font-size: 3em;
+    color: #fff;
+    border-bottom: 5px solid #4834d4;
+}
+
+.about h1 span {
+    color: #eb4d4b;
+}
+
+.content p {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+
+.button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #b33939;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: #000;
+    transition: all 0.2s;
+}
+
+@media screen and (max-width: 600px) {
+    .about h1 {
+        font-size: 2em;
+        color: #fff;
+        border-bottom: 5px solid #4834d4;
+    }
+    .content p {
+        font-size: 1.2em;
+        color: tomato;
+    }
+  }
