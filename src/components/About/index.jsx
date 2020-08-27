@@ -13,7 +13,7 @@ export default function About() {
               <h1>About <span>Me</span></h1>
             </div>
             <div className="content">
-              <p> <span className="hello">Hello!</span> I'm Kawsar Ahmed, a passionate Web Developer.
+              <p> <span className="hello">Hello!</span> I'm Kawsar Mia, a passionate Web Developer.
                   I develop web applications, mobile applications, and desktop applications.
               </p>
               <p>My Dream is to ome day start my own business are become an enterpreneur</p>

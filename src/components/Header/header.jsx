@@ -4,6 +4,7 @@ import {Link } from 'react-router-dom';
 import { Typography, Avatar, Grid, Box, Button } from "@material-ui/core";
 import Typed from "react-typed";
 import avatar from '../../kawsar3.jpg';
+import Download from '../Resume/download';
 
 // CSS STYLES
 const useStyle = makeStyles(theme => ({
@@ -37,8 +38,10 @@ const useStyle = makeStyles(theme => ({
        right: theme.spacing(3),
        color: '#ffffff'
     },
+   
     about: {
-        textDecuration: "none",
+        textDecoration: "none",
+        color: "#fff",
     }
 }))
 
@@ -61,11 +64,13 @@ function Header() {
                 <Typed strings={["Web Design", "Web Development", "MERN Stack"]} typeSpeed={40} typeSpeed={60} loop/>
             </Typography>
             <Typography>
-            <Button className={classes.resume} variant="outlined" color="secondary">
-               Get Resume
+            <Button className={classes.resume} variant="contained" color="primary">
+               
+               <Link className={classes.download}> <Download/> </Link> 
             </Button>
-            <Button variant="contained" color="primary">
-              <Link to='./about'>About Me</Link>  
+            <Button variant="contained" color="secondary">
+              <Link className={classes.about} to='./about'>About Me</Link>  
+               
             </Button>
             </Typography>
         </Box>

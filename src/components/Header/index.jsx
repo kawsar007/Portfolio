@@ -18,6 +18,7 @@ import {
 import CastForEducationIcon from '@material-ui/icons/CastForEducation';
 
 import avatar from '../../kawsar1.jpg';
+import Footer from './footer';
 
 // CSS STYLES
 const useStyle= makeStyles(theme=> ({
@@ -108,6 +109,7 @@ const Navbar = () => {
                         <Typography variant="h5" style={{color: 'tan', marginLeft: '10px'}}>Portfolio</Typography>
                         <RightMenuSlider onClose={toggleSlider("right", false)} anchor="right" open={state.right}>
                              {sideList("right")}
+                             <Footer/>
                         </RightMenuSlider>
                     </Toolbar>
                 </AppBar>
