@@ -1,0 +1,24 @@
+.container {
+    text-align: center;
+    background: linear-gradient(121.28deg, #03002C 0%, #00FF94 100%), linear-gradient(180deg, #00647A 0%, #FFFFFF 100%), linear-gradient(244.35deg, #FF8282 0%, #E86B6B 50.58%, #001B29 100%), linear-gradient(244.35deg, #E03F3F 0%, #00114B 49.48%, #FF0000 100%), radial-gradient(100% 216.55% at 0% 0%, #2400FF 0%, #FF0000 44.27%, #610051 100%), linear-gradient(307.27deg, #096F5C 0.37%, #687EB5 50.19%, #8877CE 100%), radial-gradient(56.34% 100% at 36.02% 0%, #FF00C7 0%, #006C7A 38.54%, #FF9900 100%);
+    background-blend-mode: overlay, difference, exclusion, overlay, difference, color-dodge, normal;
+    padding: 5%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.text-left {
+    font-size: 1.5em;
+    color: #fff;
+    
+}
+
+.progress {
+    margin-bottom: 1em;
+}

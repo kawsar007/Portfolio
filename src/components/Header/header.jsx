@@ -1,10 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Link } from 'react-router-dom';
-import { Typography, Avatar, Grid, Box, Button } from "@material-ui/core";
+import { Typography, Avatar, Grid, Box, Button, responsiveFontSizes, MuiThemeProvider, createMuiTheme } from "@material-ui/core";
+import {} from "@material-ui/core/useMediaQuery";
 import Typed from "react-typed";
 import avatar from '../../kawsar3.jpg';
 import Download from '../Resume/download';
+
 
 // CSS STYLES
 const useStyle = makeStyles(theme => ({
@@ -41,14 +43,30 @@ const useStyle = makeStyles(theme => ({
    
     about: {
         textDecoration: "none",
+        right: theme.spacing(3),
         color: "#fff",
+    },
+    skills: {
+        // textDecoration: "none",
+        left: theme.spacing(3),
+    },
+    skillsLink: {
+        textDecoration: "none",
+        color: "#fff"
     }
+    
 }))
+
+// Phone size letter
+let theme = createMuiTheme();
+theme = responsiveFontSizes(theme);
+
 
 function Header() {
     const classes = useStyle()
     return (
         <Box className={classes.typedContainer}>
+            <MuiThemeProvider theme={theme}>
             <Grid container justify="center">
                 <Avatar className={classes.avatar} src={avatar} alt="Kawsar"/>
             </Grid>
@@ -64,15 +82,17 @@ function Header() {
                 <Typed strings={["Web Design", "Web Development", "MERN Stack"]} typeSpeed={40} typeSpeed={60} loop/>
             </Typography>
             <Typography>
-            <Button className={classes.resume} variant="contained" color="primary">
-               
+            <Button size="small" className={classes.resume} variant="contained" color="primary">       
                <Link className={classes.download}> <Download/> </Link> 
             </Button>
-            <Button variant="contained" color="secondary">
-              <Link className={classes.about} to='./about'>About Me</Link>  
-               
+            <Button size="small" variant="contained" color="secondary">
+              <Link className={classes.about} to='./about'>About Me</Link>              
+            </Button>
+            <Button size="small" className={classes.skills} variant="outlined" color="secondary">
+              <Link className={classes.skillsLink} to='./skills'>Skills</Link>              
             </Button>
             </Typography>
+            </MuiThemeProvider>
         </Box>
     )
 }

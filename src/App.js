@@ -5,6 +5,7 @@ import RootComponent from './components/index';
 import {BrowserRouter as Router, Route } from "react-router-dom";
 import Resume from "./components/Resume/index";
 import About from "./components/About/index";
+import Skills from "./components/Skills/index";
 import Portfolio from "./components/Portfolio/portfolio";
 import Contact from "./components/Contact/contact";
 import Education from "./components/Education/Edication";
@@ -15,7 +16,8 @@ function App() {
       <Router>
         <Route path="/" exact component={RootComponent}/>
         <Route path="/resume" component={Resume}/>
-         <Route path="/about" component={About}/>
+        <Route path="/about" component={About}/>
+        <Route path="/skills" component={Skills}/>
         <Route path="/portfolio" component={Portfolio}/>
         <Route path="/contact" component={Contact}/>
         <Route path="/education" component={Education} />

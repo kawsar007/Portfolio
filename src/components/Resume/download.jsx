@@ -26,12 +26,13 @@ export default function Download() {
       return (
         <div className="App">
           <a
-            href="https://upload.wikimedia.org/wikipedia/en/6/6b/Hello_Web_Series_%28Wordmark%29_Logo.png"
+            // href="https://upload.wikimedia.org/wikipedia/en/6/6b/Hello_Web_Series_%28Wordmark%29_Logo.png"
+            href="resume.pdf"
             download
             onClick={e => download(e)}
           >
-            <i className="fa fa-download" />
-            RESUME
+            {/* <i className="fa fa-download" /> */}
+            <span style={{ color: "#fff", textDecoration: "none"}}>RESUME</span>
           </a>
         </div>
       );

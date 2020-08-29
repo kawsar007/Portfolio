@@ -30,17 +30,20 @@ const Footer = () => {
            <BottomNavigationAction
              className={classes.root}
              style={{padding: 0}}
+             href="https://www.facebook.com/kawser.ahamed.142"
              icon={<Facebook/>}
             />
             
             <BottomNavigationAction
              className={classes.root}
              style={{padding: 0}}
+             href="https://github.com/kawsar007"
              icon={<GitHub/>}
             />
             <BottomNavigationAction
              className={classes.root}
              style={{padding: 0}}
+             href="https://www.instagram.com/kawser.ahamed.142/?hl=en"
              icon={<Instagram/>}
             />
        </BottomNavigation>

@@ -44,11 +44,11 @@ const menuItem = [
         listText: "Home",
         listPath: "/"
     },
-    {
-        listIcon: <AssignmentInd/>,
-        listText: "Resume",
-        listPath: "/resume"
-    },
+    // {
+    //     listIcon: <AssignmentInd/>,
+    //     listText: "Resume",
+    //     listPath: "/resume"
+    // },
     {
         listIcon: <Apps/>,
         listText: "Portfolio",
@@ -106,7 +106,7 @@ const Navbar = () => {
                         <IconButton onClick={toggleSlider("right", true)} style={{background: '#fff'}}>
                         <ArrowBack style={{ color: 'tomato'}}/>
                         </IconButton>
-                        <Typography variant="h5" style={{color: 'tan', marginLeft: '10px'}}>Portfolio</Typography>
+                        <Typography variant="h5" style={{color: 'tan', marginLeft: '10px'}}>Kawsar</Typography>
                         <RightMenuSlider onClose={toggleSlider("right", false)} anchor="right" open={state.right}>
                              {sideList("right")}
                              <Footer/>
