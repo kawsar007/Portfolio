@@ -42,9 +42,10 @@ const useStyle = makeStyles(theme => ({
     },
    
     about: {
-        textDecoration: "none",
+        
         right: theme.spacing(3),
-        color: "#fff",
+        // color: "#fff",
+        // textDecoration: "none",
     },
     skills: {
         // textDecoration: "none",
@@ -86,10 +87,10 @@ function Header() {
                <Link className={classes.download}> <Download/> </Link> 
             </Button>
             <Button size="small" variant="contained" color="secondary">
-              <Link className={classes.about} to='./about'>About Me</Link>              
+              <Link className={classes.about} style={{textDecoration: "none", color: "#fff"}} to='./about'>About Me</Link>              
             </Button>
             <Button size="small" className={classes.skills} variant="outlined" color="secondary">
-              <Link className={classes.skillsLink} to='./skills'>Skills</Link>              
+              <Link className={classes.skillsLink} style={{textDecoration: "none", color: "#fff"}} to='./skills'>Skills</Link>              
             </Button>
             </Typography>
             </MuiThemeProvider>

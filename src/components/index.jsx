@@ -17,17 +17,26 @@ const RootComponent = () => {
         <>
               <Navbar/>
               <Header/>
-          
+
            <Particles
-               canvasClassName={classes.particlesCanva}
-               params={{
-                  particles: {
-                      number: {
-                          value: 45
-                      }
-                  }
-               }}
-           />
+            params={{
+                "particles": {
+                    "number": {
+                        "value": 50
+                    },
+                    "size": {
+                        "value": 3
+                    }
+                },
+                "interactivity": {
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        }
+                    }
+                }
+  	       }} />
 
         </>
     )
